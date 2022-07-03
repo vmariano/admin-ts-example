@@ -12,7 +12,7 @@ class User extends Component {
   }
 
   fetchUsers() {
-    fetch("/users/getUsers")
+    fetch("/users")
       .then(response => {
         return response.json();
       })
