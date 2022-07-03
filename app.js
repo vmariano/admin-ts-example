@@ -1,4 +1,5 @@
 import express from "express";
+import 'dotenv/config'
 import bodyParser from "body-parser";
 import users from "./routes/users";
 
