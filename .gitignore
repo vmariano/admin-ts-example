@@ -1,7 +1,9 @@
 
 
-
+# Ignore project folders
 node_modules/
+src/public/
 
 
+# Editor forlders
 .Idea/
