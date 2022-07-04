@@ -21,7 +21,7 @@ var config = {
       {
         test: /\.(jpe?g|png|gif)$/i, //to support eg. background-image property
         loader: "file-loader",
-        query: {
+        options: {
           name: "[path][name].[ext]",
           outputPath: "../"
         }
@@ -29,7 +29,7 @@ var config = {
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, //to support @font-face rule
         loader: "url-loader",
-        query: {
+        options: {
           limit: "10000",
           name: "[path][name].[ext]",
           outputPath: "../"
@@ -40,7 +40,7 @@ var config = {
         include: APP_DIR,
         exclude: /(node_modules|bower_components)/,
         loader: "babel-loader",
-        query: {
+        options: {
           presets: ["@babel/preset-react", "@babel/preset-env"],
           plugins: [
             "react-html-attrs",
