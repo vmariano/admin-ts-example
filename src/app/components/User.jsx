@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { fetchUsers } from "../data/userHelpers";
 
 class User extends Component {
   constructor(props) {
@@ -12,11 +13,7 @@ class User extends Component {
   }
 
   fetchUsers() {
-    fetch("/users")
-      .then(response => {
-        return response.json();
-      })
-      .then(json => {
+      fetchUsers().then(json => {
         this.setState({
           user: json
         });
