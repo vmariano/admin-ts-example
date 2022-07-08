@@ -12,14 +12,12 @@ function UserList() {
             {
                 users.map((user) => {
                     return (<tr>
-                        {/*<td><img style="max-width: 30px" src={user.profilePic} alt="User avatar"/></td>*/}
-                        <td><img style="max-width: 30px" src="../../images/avatars/roy.png" alt="User avatar"/></td>
                         <td>{user.name}</td>
                         <td>
-                            <select>
-                                <option>Admin</option>
-                                <option>User</option>
-                                <option>Guest</option>
+                            <select value={user.role}>
+                                <option value='admin'>Admin</option>
+                                <option value='user'>User</option>
+                                <option value='guest'>Guest</option>
                             </select>
                         </td>
                     </tr>);
